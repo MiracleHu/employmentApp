@@ -1,0 +1,12 @@
+.center{
+	text-align: center;
+}
+.left{
+  float:left;
+  cursor: pointer;
+}
+.right{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}

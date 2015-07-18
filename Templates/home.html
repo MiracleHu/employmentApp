@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="well h3 center">Employee Directory</div>
+	<table class="table table-striped">
+    <tbody>
+      <tr ng-repeat="employee in employees">
+        <td><img src="{{employee.img}}" alt="{{employee.Name}}"></td>
+        <td><span class="h4">{{employee.Name}}</span><br><br>
+        	{{employee.Title}}
+        </td>
+        <td>
+        	<button class="btn btn-info">{{employee.DirectReport.length}}</button>
+        	<button class="btn btn-success" ng-click="empDetail(employee)"><span class="glyphicon glyphicon-chevron-right"></span></button>
+        </td>
+      </tr>
+    </tbody>
+	</table>
+</div>

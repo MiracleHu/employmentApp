@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="well h3 center"><span class="glyphicon glyphicon-chevron-left left" ng-click="back()"></span>Employee</div>
+	<table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><img src="{{employee.img}}" alt="{{employee.Name}}"></td>
+        <td><span class="h4">{{employee.Name}}</span><br>
+        	  {{employee.Title}}
+        </td>
+      </tr>
+      <tr>
+        <td>View Manager<br>{{ managerObj.Name||"No Manager"}}</td>
+        <td><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.Manager">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>View Direct Reports<br>{{employee.DirectReport.length}}</td>
+        <td><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.DirectReport.length">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>Call Office<br>{{employee.OfficePhone}}</td>
+        <td><span class="glyphicon glyphicon-earphone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>Call Cell<br>{{employee.CellPhone}}</td>
+        <td><span class="glyphicon glyphicon-earphone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>SMS<br>{{employee.SMS}}</td>
+        <td><span class="glyphicon glyphicon-phone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>Email<br>{{employee.Email}}</td>
+        <td><span class="glyphicon glyphicon-envelope right">&nbsp</span></td>
+      </tr>
+
+    </tbody>
+	</table>
+</div>

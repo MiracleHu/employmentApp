@@ -1,25 +1,18 @@
-app.controller('detailCtrl',function($scope,getUserService,$location){
+app.controller('detailCtrl',function($scope,getUserService,$routeParams){
 
-	$scope.employee = getUserService.employee;
-	$scope.back = function(){
-		$location.path('/home');
-		getUserService.employee={};
-	};
+	var empID = $routeParams.empID;
+	console.log(empID);
 
-	$scope.managerObj={};
-	$scope.findManager = function(managerID){
-
-		getUserService.getUser()
+	getUserService.getUser()
 		.success(function(data){
-			$scope.managerObj = data.employee[managerID-1];
-			// console.log($scope.employees);
+			// execute in sequence in callback function
+			$scope.employee = data.employee[empID-1];
+			$scope.managerObj = data.employee[$scope.employee.Manager-1];
+			// console.log($scope.employee);
+			// console.log($scope.managerObj);
 		})
 		.error(function(data) {
 			console.log('Error '+data);
 		});
-	};
 
-	$scope.$watch('$scope.employee', function() {$scope.findManager($scope.employee.Manager);});
-	//Here we can use $routeParams to solve this,https://docs.angularjs.org/tutorial/step_07
-	
-});
+	});

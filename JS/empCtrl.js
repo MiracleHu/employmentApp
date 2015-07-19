@@ -1,4 +1,4 @@
-app.controller('empCtrl',function($scope,getUserService,$location){
+app.controller('empCtrl',function($scope,getUserService){
 
 	$scope.employees = [];
 	
@@ -10,12 +10,6 @@ app.controller('empCtrl',function($scope,getUserService,$location){
 	.error(function(data) {
 		console.log('Error '+data);
 	});
-
-	$scope.empDetail = function(employee){
-		getUserService.employee = employee;
-		$location.path('/detail');
-		// console.log(getUserService.employee);
-	};
 
 
 });

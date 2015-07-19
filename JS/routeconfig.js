@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
     templateUrl: 'Templates/home.html',
     controller: 'empCtrl'
   });
-  $routeProvider.when('/detail', {
+  $routeProvider.when('/detail/:empID', {
     templateUrl: 'Templates/detail.html',
     controller: 'detailCtrl'
   });

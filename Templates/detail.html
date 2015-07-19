@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="well h3 center"><span class="glyphicon glyphicon-chevron-left left" ng-click="back()"></span>Employee</div>
+  <div class="well h3 center"><a href="#/home"><span class="glyphicon glyphicon-chevron-left left"></span></a>Employee</div>
 	<table class="table table-striped">
     <tbody>
       <tr>
@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td>View Manager<br>{{ managerObj.Name||"No Manager"}}</td>
-        <td><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.Manager">&nbsp</span></td>
+        <td><a href="#/detail/{{managerObj.ID}}"><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.Manager">&nbsp</span></a></td>
       </tr>
       <tr>
         <td>View Direct Reports<br>{{employee.DirectReport.length}}</td>

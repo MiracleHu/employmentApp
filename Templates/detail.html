@@ -13,8 +13,11 @@
         <td><a href="#/detail/{{managerObj.ID}}"><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.Manager">&nbsp</span></a></td>
       </tr>
       <tr>
-        <td>View Direct Reports<br>{{employee.DirectReport.length}}</td>
-        <td><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.DirectReport.length">&nbsp</span></td>
+        <td>View Direct Reports
+        	<br>
+        	{{employee.DirectReport.length}}
+        </td>
+        <td><a href="#/reports/{{employee.DirectReport.toString()}}"><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.DirectReport.length">&nbsp</span></a></td>
       </tr>
       <tr>
         <td>Call Office<br>{{employee.OfficePhone}}</td>

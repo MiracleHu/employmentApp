@@ -8,7 +8,8 @@
         	{{employee.Title}}
         </td>
         <td>
-        	<button class="btn btn-info">{{employee.DirectReport.length}}</button>
+          <a href="#/reports/{{employee.DirectReport.toString()}}" ng-show="employee.DirectReport.length">{{employee.DirectReport.length}}</a>
+        	<span ng-hide="employee.DirectReport.length">{{employee.DirectReport.length}}</span>
         	<a href="#/detail/{{employee.ID}}"><span class="glyphicon glyphicon-chevron-right right"></span></a>
         </td>
       </tr>

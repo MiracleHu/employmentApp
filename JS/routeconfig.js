@@ -8,6 +8,10 @@ app.config(function($routeProvider) {
     templateUrl: 'Templates/detail.html',
     controller: 'detailCtrl'
   });
+  $routeProvider.when('/reports/:reportStr', {
+    templateUrl: 'Templates/direcReport.html',
+    controller: 'direRepCtrl'
+  });
 
   $routeProvider.otherwise({ redirectTo: '/home' });
 

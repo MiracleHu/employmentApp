@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="well h3 center"><a href="#/home"><span class="glyphicon glyphicon-chevron-left left"></span></a>Direct Report</div>
+	<table class="table table-striped">
+    <tbody>
+      <tr ng-repeat="report in reports">
+        <td><img src="{{report.img}}" alt="{{report.Name}}"></td>
+        <td><span class="h4">{{report.Name}}</span><br><br>
+        	{{report.Title}}
+        </td>
+        <td>
+        	<a href="#/reports/{{report.DirectReport.toString()}}" ng-show="report.DirectReport.length">{{report.DirectReport.length}}</a>
+        	<span ng-hide="report.DirectReport.length">{{report.DirectReport.length}}</span>
+        	<a href="#/detail/{{report.ID}}"><span class="glyphicon glyphicon-chevron-right right"></span></a>
+        </td>
+      </tr>
+    </tbody>
+	</table>
+</div>

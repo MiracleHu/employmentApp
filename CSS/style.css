@@ -10,3 +10,17 @@
 	font-size: 20px;
 	cursor: pointer;
 }
+.search{
+	width: 200px;
+	height: 40px;
+	margin-bottom: 20px;
+}
+.main{
+	margin-top: 60px;
+}
+.navbar{
+	opacity: 0.8;
+}
+p{
+	background: #000
+}

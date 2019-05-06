@@ -1,6 +1,6 @@
-app.service('getUserService',function($http){
+app.service('getUserService', function ($http) {
 
-	this.getUser = function(){
+	this.getUser = function () {
 		return $http.get('person.json');
 	};
 

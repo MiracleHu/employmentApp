@@ -1,7 +1,7 @@
 app.controller('detailCtrl',function($scope,getUserService,$routeParams){
 
 	var empID = $routeParams.empID;
-	console.log(empID);
+	// console.log(empID);
 
 	getUserService.getUser()
 		.success(function(data){

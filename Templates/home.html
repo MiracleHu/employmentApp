@@ -1,8 +1,9 @@
 <div class="container">
   <div class="well h3 center">Employee Directory</div>
+  <input type="text" class="search" ng-model="query" placeholder="search">
 	<table class="table table-striped">
     <tbody>
-      <tr ng-repeat="employee in employees">
+      <tr ng-repeat="employee in employees | filter: query">
         <td><img src="{{employee.img}}" alt="{{employee.Name}}"></td>
         <td><span class="h4">{{employee.Name}}</span><br><br>
         	{{employee.Title}}

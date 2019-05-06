@@ -1,4 +1,4 @@
-app.controller('direRepCtrl', function ($scope, getUserService, $routeParams) {
+app.controller('direRepCtrl', ['$scope', 'getUserService', '$routeParams',function ($scope, getUserService, $routeParams) {
 
 	var reportArr = $routeParams.reportStr.split(",").map(Number);
 	console.log(reportArr);
@@ -20,4 +20,4 @@ app.controller('direRepCtrl', function ($scope, getUserService, $routeParams) {
 			console.log('Error ' + data);
 		});
 
-});
+}]);

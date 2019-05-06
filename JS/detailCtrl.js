@@ -1,4 +1,4 @@
-app.controller('detailCtrl',function($scope,getUserService,$routeParams){
+app.controller('detailCtrl',['$scope', 'getUserService', '$routeParams',function($scope,getUserService,$routeParams){
 
 	var empID = $routeParams.empID;
 	// console.log(empID);
@@ -15,4 +15,4 @@ app.controller('detailCtrl',function($scope,getUserService,$routeParams){
 			console.log('Error '+data);
 		});
 
-	});
+	}]);
